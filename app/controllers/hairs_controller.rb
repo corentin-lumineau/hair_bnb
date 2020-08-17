@@ -23,7 +23,7 @@ class HairsController < ApplicationController
   def destroy
     @hair = Hair.find(params[:id])
     @hair.destroy
-  en
+  end
 
   private
 
