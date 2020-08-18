@@ -35,10 +35,10 @@ end
 puts "Created #{User.count} users"
 
 puts "Creating hairs"
-Hairs1 = { user_id: users[0].id , title:"Chevelure chocolat soyeuse et ondulée", description: "Une belle touffe brune pour les amateurs de poils longs", color: "marron", nature: "frisé", quantity: "1 000 000", hair_length: "2 m", status: true, price: 10000 }
+Hairs1 = { user_id: users[0].id , title:"Chevelure chocolat soyeuse et ondulée", description: "Une belle touffe brune pour les amateurs de poils longs", color: "brun", nature: "bouclé", quantity: "1 000 000", hair_length: "2 m", status: true, price: 10000 }
 Hairs2 = { user_id: users[1].id , title:"Chevelure sauvage et coquine", description:"Une chevelure pour les guerriers, les vrais", color:"noir", nature:"raide", quantity:"200 000", hair_length:"90 cm", status: true, price: 5000 }
 Hairs3 = { user_id: users[2].id , title:"Chevelure d'un autre monde", description:"Prêt pour faire flipper les gosses ?", color:"bleu", nature:"ondulé", quantity:"500 000", hair_length:"1m20", status: true, price: 8000 }
-Hairs4 = { user_id: users[3].id, title:"Chevelure perdue", description:"Une chevelure faites pour les aventurier !", color:"marron", nature:"frisé", quantity:"100 000", hair_length:"50cm", status: true, price: 2000 }
+Hairs4 = { user_id: users[3].id, title:"Chevelure perdue", description:"Une chevelure faites pour les aventurier !", color:"chatain", nature:"bouclé", quantity:"100 000", hair_length:"50cm", status: true, price: 2000 }
 Hairs5 = { user_id: users[4].id , title:"Chevelure nordique", description:"Vous êtes prêt pour traverser l'hiver !", color:"roux", nature:"ondulé", quantity:"50 000", hair_length:"40 cm", status: true, price: 3500 }
 
 
