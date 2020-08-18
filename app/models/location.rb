@@ -23,18 +23,18 @@ class Location < ApplicationRecord
   # attribute est soit la date de depart soit la date de fin
   def valid_dates
     locations = hair.locations
-    data_ranges = locations.map { |loc| loc.start_date..loc.end_date }
+    data_ranges = locations.map { |loc| loc.start_date.to_date..loc.end_date.to_date }
 
 
     if !(date_included?(data_ranges))
-      record.errors.add(attribute, "not available")
+      errors.add(:start_date, "not available")
     end
   end
 
   def date_included?(data_ranges)
     data_ranges.all? do |une_duree_de_loc|
       une_duree_de_loc.to_a.each do |day|
-        return false if location.start_date..location.end_date).include?(day)
+        return false if (start_date.to_date..end_date.to_date).include?(day)
       end
     end
   end
