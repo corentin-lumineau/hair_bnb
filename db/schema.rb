@@ -10,7 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_17_145008) do
+
+ActiveRecord::Schema.define(version: 2020_08_17_160811) do
+
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,14 +21,14 @@ ActiveRecord::Schema.define(version: 2020_08_17_145008) do
     t.string "title"
     t.text "description"
     t.string "color"
-    t.string "type"
-    t.integer "quantity"
-    t.integer "hair_length"
-    t.string "status"
+    t.string "quantity"
+    t.string "hair_length"
     t.integer "price"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.boolean "status", default: true
+    t.string "nature"
     t.index ["user_id"], name: "index_hairs_on_user_id"
   end
 
