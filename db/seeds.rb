@@ -7,6 +7,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+puts "Cleaning Locations..."
+Location.destroy_all
+
 puts "Cleaning Hairs..."
 Hair.destroy_all
 
