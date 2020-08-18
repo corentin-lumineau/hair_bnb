@@ -1,0 +1,29 @@
+.container_formulaire{
+  /*background-color: red;*/
+  width:300px;
+}
+
+.card_formulaire{
+  background-color: white;
+  margin: 20px 20px;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.4);
+}
+
+.btn_ghost{
+  color: #4A4A4A;
+  border: 1px solid #4A4A4A;
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.titre_form{
+  font-family: 'Lora', serif;
+}
