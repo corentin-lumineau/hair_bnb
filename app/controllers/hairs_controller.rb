@@ -1,14 +1,16 @@
 class HairsController < ApplicationController
   def index
-    @hairs = Hair.all
+    @hairs = policy_scope(Hair)
   end
 
   def new
     @hair = Hair.new
+    authorize @hair
   end
 
   def create
     @hair = Hair.new(hair_params)
+    authorize @hair
     if @hair.save
       redirect_to hair_path(@hair)
     else
@@ -18,10 +20,12 @@ class HairsController < ApplicationController
 
   def show
     @hair = Hair.find(params[:id])
+    authorize @hair
   end
 
   def destroy
     @hair = Hair.find(params[:id])
+    authorize @hair
     @hair.destroy
   end
 
