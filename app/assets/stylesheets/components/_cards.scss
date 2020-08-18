@@ -1,10 +1,30 @@
 .hair_card {
-
+  position: relative;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  height: 112px;
+  width: 170px;
+  i {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
 }
 
-.top_hair_card {
-  position: absolute;
-  bottom: 17%;
-  background: #C4C4C4;
-  border-radius: 5px;
+.flex {
+  display: flex;
+  text-align: center;
+  padding-bottom: 10px;
+  h4 {
+    padding-right: 5px;
+    margin-bottom: 0px;
+  }
+  i {
+    padding-right: 5px;
+    color: $rose;
+  }
+}
+
+.color_hair_card {
+
 }
