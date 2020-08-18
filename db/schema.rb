@@ -32,6 +32,17 @@ ActiveRecord::Schema.define(version: 2020_08_17_160811) do
     t.index ["user_id"], name: "index_hairs_on_user_id"
   end
 
+  create_table "locations", force: :cascade do |t|
+    t.bigint "hair_id", null: false
+    t.bigint "user_id", null: false
+    t.date "start_date"
+    t.date "end_date"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["hair_id"], name: "index_locations_on_hair_id"
+    t.index ["user_id"], name: "index_locations_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -48,4 +59,6 @@ ActiveRecord::Schema.define(version: 2020_08_17_160811) do
   end
 
   add_foreign_key "hairs", "users"
+  add_foreign_key "locations", "hairs"
+  add_foreign_key "locations", "users"
 end
