@@ -3,7 +3,7 @@
 }
 
 .container-global {
-  background-image: asset-url("homme-cheveux-permanentes.jpg");
+  background-color: grey;
   background-repeat: no-repeat;
   width: 100vw;
   height: 100vh;
@@ -11,6 +11,14 @@
   align-items: center;
   background-position: center;
   background-size: cover;
+
+
+  &.with-bg {
+    background-image: asset-url("homme-cheveux-permanentes.jpg");
+    background-position: center;
+    background-size: cover;
+  } 
+
 
   h2 {
     color:white;
