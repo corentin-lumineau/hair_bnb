@@ -18,19 +18,17 @@ class Location < ApplicationRecord
   end
 
 
-  # record est l'objet de la validation
-  # value est assignée à la date de debut et de fin rentrées par le user
-  # attribute est soit la date de depart soit la date de fin
+  #Methode pour valider que les dates choisies par le user soient disponibles
   def valid_dates
     locations = hair.locations
     data_ranges = locations.map { |loc| loc.start_date.to_date..loc.end_date.to_date }
 
-
+#renvoie un message d'erreur si date incluse
     if !(date_included?(data_ranges))
       errors.add(:start_date, "not available")
     end
   end
-
+#Petite méthode pour vérifier l'inclusion des dates
   def date_included?(data_ranges)
     data_ranges.all? do |une_duree_de_loc|
       une_duree_de_loc.to_a.each do |day|
