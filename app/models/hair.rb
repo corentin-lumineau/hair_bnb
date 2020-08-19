@@ -12,8 +12,8 @@ class Hair < ApplicationRecord
   validates :quantity, presence: true
   validates :price, presence: true
 
-  validates :color, inclusion: { in: Hair::COLORS }
-  validates :nature, inclusion: { in: Hair::TYPES }
+  # validates :color, inclusion: { in: Hair::COLORS }
+  # validates :nature, inclusion: { in: Hair::TYPES }
 
 
 end

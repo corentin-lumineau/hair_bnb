@@ -1,0 +1,12 @@
+<div class="container_formulaire">
+  <div class="card_formulaire">
+    <h2 class="titre_form"> Je veux porter ces cheveux 👩‍🦰  </h2>
+    <%= simple_form_for( @location ) do |f| %>
+      <%= f.input :start_date, label: 'Début de location', class: "btn_ghost"%>
+      <%= f.input :end_date, label: 'Fin de location' %>
+      <%= f.submit  'Vérifier la disponibilité', class: "btn btn-danger" %>
+    <% end %>
+
+  </div>
+
+</div>
