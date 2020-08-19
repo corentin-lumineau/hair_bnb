@@ -1,7 +1,7 @@
 <div class="navbar-bg navbar-content">
   <div class="navbar-content w-100">
     <%= link_to "hairbnb", root_path %>
-    <div>tgt</div>
+    <div>Je suis un bouton</div>
     <div class="navbar-content">
       <div class="navbar-content">
         <i class="fas fa-globe mr-2"></i>
@@ -25,41 +25,33 @@
   </div>
 </div>
 
-<div class="container-global d-flex">
+<div class="container-global">
   <div>
-    <div class="hair_card mr-2" style="background-image: url('<%= image_path "Chewbacca.jpg" %>')">
-      <i id="bg" class="fas fa-heart"></i>
-      <i class="far fa-heart"></i>
-    </div>
-    <h3>Chocolat | Kashyyyk</h3>
+   BAR DE RECHERCHE
   </div>
-  <div>
-    <div class="hair_card" style="background-image: url('<%= image_path "Chewbacca.jpg" %>')">
-      <i id="bg" class="fas fa-heart"></i>
-      <i class="far fa-heart"></i>
-    </div>
+  <div class="border-t-gris color-card">
+    <h2>Avec Hairbnb, fini la calvitie </h2>
     <div class="flex">
-      <i class="fas fa-star"></i>
-      <h4>5</h4>
-      <h4>(398)</h4>
+      <% @hair_colors.each do |color| %>
+        <%= render "shared/color_hair_card", color: color %>
+      <% end %>
     </div>
-    <h3>Chocolat | Kashyyyk</h3>
   </div>
-  <div>
-    <div class="color_hair_card ml-2" style="background-image: url('<%= image_path "Chewbacca.jpg" %>')">
-      <div class="car_footer">
-        <h4>Hair color</h4>
-      </div>
+  <div class="top-card">
+    <h2>Les meilleurs cheveulures</h2>
+    <h3 id="h3">Découvrez une sélection des chevelures les mieux notées dans le monde</h3>
+    <div class="flex">
+      <% @hairs.each do |hair| %>
+        <%= render "shared/top_hair_card", hair: hair %>
+      <% end %>
+    </div>
+  </div>
+  <div class="hair-card">
+    <h3>Classement par dates de mise en ligne</h3>
+    <div class="flex">
+      <% @hairs.each do |hair| %>
+        <%= render "shared/hair-card", hair: hair %>
+      <% end %>
     </div>
   </div>
 </div>
-
-  <div class="flex">
-    <img src="<%= image_path "Chewbacca.jpg" %>" alt="" class="photo-size">
-    <div class="photo-display photo-size">
-      <img src="<%= image_path "Chewbacca.jpg" %>" alt="" class="photo-1 scd-photo-size">
-      <img src="<%= image_path "Chewbacca.jpg" %>" alt="" class="photo-2 scd-photo-size">
-      <img src="<%= image_path "Chewbacca.jpg" %>" alt="" class="photo-3 scd-photo-size">
-      <img src="<%= image_path "Chewbacca.jpg" %>" alt="" class="photo-4 scd-photo-size">
-    </div>
-  </div>

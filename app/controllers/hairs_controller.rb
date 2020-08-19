@@ -1,6 +1,8 @@
 class HairsController < ApplicationController
   def index
     @hairs = policy_scope(Hair)
+    @hair_colors = %w(blond roux brun chatain noir rouge blanc)
+    @hair_top = %w(Chew4 Kahl-Drogo Sulli Robinson Tormund)
   end
 
   def new
