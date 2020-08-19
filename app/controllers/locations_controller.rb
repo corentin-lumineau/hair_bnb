@@ -2,10 +2,12 @@ class LocationsController < ApplicationController
   def new
     @location = Location.new
     @hair = Hair.find(params[:hair_id])
+    authorize @location
   end
 
   def create
     @location = Location.new(location_params)
+    authorize @location
     @hair = Hair.find(params[:hair_id])
     @location.hair = @hair
     @location.user = current_user
@@ -18,6 +20,7 @@ class LocationsController < ApplicationController
 
   def show
     @location = Location.find(params[:id])
+    authorize @location
     @hair = @location.hair
   end
 
