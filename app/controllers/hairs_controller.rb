@@ -25,6 +25,7 @@ class HairsController < ApplicationController
 
   def show
     @user = current_user
+    @location = Location.new
     authorize @hair
   end
 
