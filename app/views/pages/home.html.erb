@@ -1,6 +1,7 @@
 <div class="navbar-bg navbar-content d-flex space-between">
-   <%= link_to "Hairbnb", "/ruby-book", class: "logo" %>
-   <%= link_to "Sign in", " /users/edit", class: "btn" %>
+   <% if user_signed_in?  %>
+      <%= link_to "Sign in", " /users/edit", class: "btn" %>
+   <% end %>
 </div>
 
 <div class="container-global with-bg d-flex">
