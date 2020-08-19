@@ -1,27 +1,20 @@
-<div class="navbar-bg navbar-content d-flex space-between">
-   <%= link_to "Hairbnb", "/ruby-book", class: "logo" %>
-   <%= "user.name" %>
-   <%= link_to "remplace moi par avatar", "/ruby-book", class: "btn" %>
+<div class="container container-global">
+  <%# <div class="ml-5 mr-5 pl-5 pr-5 rounded"> %>
+    <h2>Nouvelle chevelure</h2>
+    <div><%= simple_form_for @hair do |f| %>
+      <%= f.input :title %>
+      <%= f.input :description %>
+      <%= f.input :color, collection: Hair::COLORS %>
+      <%= f.input :nature, collection: Hair::TYPES %>
+      <%= f.input :quantity %>
+      <%= f.input :hair_length %>
+      <%= f.input :price %>
+        <div class="form-actions">
+        <%= f.button :submit, "Envoie ta chevelure!" %>
+        <%end%>
+      </div>
+    </div>
 </div>
-<div class="img-container d-flex">
-  <div class="card-form ">
-  <div><%= simple_form_for @hair do |f| %>
-    <%= f.input :title %>
-    <%= f.input :description %>
-    <%= f.input :color, collection: Hair::COLORS %>
-    <%= f.input :nature, collection: Hair::TYPES %>
-    <%= f.input :quantity %>
-    <%= f.input :hair_length %>
-    <%= f.input :price %>
-    <%= f.button :submit %>
-    <% end %>
-  </div>
-  </div>
-
-</div>
-
-
-
 
 
 <div id="my-footer">

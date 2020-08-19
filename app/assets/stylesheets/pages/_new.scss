@@ -8,18 +8,19 @@
 }
 #my-footer{
   height: 100px;
+  text-align: center;
 }
 .list-inline{
   display: flex;
   align-items: center;
   height: 100%;
+  justify-content: center;
 }
 
 .list-inline li{
   padding: 20px;
   font-size: 20px;
-
-
+  
   .fab{
     color: #dd135b;
   }
