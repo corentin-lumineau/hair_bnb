@@ -1,4 +1,7 @@
 // Import page-specific CSS files here.
+@import "home";
+@import "new";
+
 
 .color-card {
   h2 {
@@ -23,3 +26,4 @@
     padding-top: 75px;
   }
 }
+

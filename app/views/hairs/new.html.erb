@@ -1,0 +1,34 @@
+<div class="navbar-bg navbar-content d-flex space-between">
+   <%= link_to "Hairbnb", "/ruby-book", class: "logo" %>
+   <%= "user.name" %>
+   <%= link_to "remplace moi par avatar", "/ruby-book", class: "btn" %>
+</div>
+<div class="img-container d-flex">
+  <div class="card-form ">
+  <div><%= simple_form_for @hair do |f| %>
+    <%= f.input :title %>
+    <%= f.input :description %>
+    <%= f.input :color, collection: Hair::COLORS %>
+    <%= f.input :nature, collection: Hair::TYPES %>
+    <%= f.input :quantity %>
+    <%= f.input :hair_length %>
+    <%= f.input :price %>
+    <%= f.button :submit %>
+    <% end %>
+  </div>
+  </div>
+
+</div>
+
+
+
+
+
+<div id="my-footer">
+  <ul class="list-inline">
+    <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+    <li><a href="#"><i class="fab fa-instagram"></i></li>
+    <li><a href="#"><i class="fab fa-twitter-square"></i></li>
+    <li><a href="#"><i class="fab fa-youtube"></i></li>
+  </ul>
+</div>

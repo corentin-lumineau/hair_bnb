@@ -1,0 +1,40 @@
+.img-container{
+  background-image: asset-url("homme-cheveux-permanentes.jpg");
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+}
+#my-footer{
+  height: 100px;
+}
+.list-inline{
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.list-inline li{
+  padding: 20px;
+  font-size: 20px;
+
+
+  .fab{
+    color: #dd135b;
+  }
+}
+
+.list-inline li:hover {
+  .fab{
+    color: rgba(221, 19, 91, 0.8);
+}
+}
+
+.card-form{
+  background-color: white;
+  opacity: 0.9;
+  width: 25%;
+  height: 75%;
+
+}
