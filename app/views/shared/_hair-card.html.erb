@@ -1,8 +1,10 @@
 <!-- HAIR CARD -->
-<div>
+<%= link_to(hair_path(hair.id))do %>
+  <div id="lien_out">
     <div class="hair_card mr-2" style="background-image: url('<%= image_path "Chewbacca.jpg" %>')">
       <i id="bg" class="fas fa-heart"></i>
       <i class="far fa-heart"></i>
     </div>
-    <h3>Chocolat | Kashyyyk</h3>
+    <h3> <%= "#{hair.color.capitalize} | #{hair.nature.capitalize}" %> </h3>
   </div>
+<% end %>

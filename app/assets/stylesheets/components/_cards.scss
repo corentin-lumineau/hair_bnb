@@ -1,3 +1,11 @@
+
+#lien_out {
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
 // HAIR CARD & TOP ==========
 .hair_card {
   position: relative;
@@ -12,6 +20,9 @@
     right: 10px;
     color: $noir;
   }
+  h3 {
+    text-align: start;
+  }
 }
 
 #bg {
@@ -21,7 +32,7 @@
 // TOP HAIR CARD ==========
 .flex {
   display: flex;
-  text-align: center;
+  text-align: start;
   padding-bottom: 10px;
   h4 {
     padding-right: 5px;
