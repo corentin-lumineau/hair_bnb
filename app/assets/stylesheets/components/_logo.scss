@@ -6,8 +6,14 @@
   line-height: 26px;
 /* identical to box height */
 
-text-align: justify;
-letter-spacing: -0.333333px;
+  text-align: justify;
+  letter-spacing: -0.333333px;
 
-color: #FF395B;
+  color: #FF395B;
+
+  &:hover {
+    text-decoration: none;
+  }
 }
+
+
