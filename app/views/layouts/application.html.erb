@@ -12,6 +12,17 @@
   </head>
 
   <body>
+    <% if user_signed_in? %>
+      <%= render "shared/navbar_when_sign_in" %>
+    <% else %>
+      <%= render "shared/navbar_when_not_sign_in" %>
+    <% end %>
+
+
+
+
+
+
     <%= render 'shared/flashes' %>
     <%= yield %>
   </body>
