@@ -1,3 +1,29 @@
 // Import page-specific CSS files here.
 @import "home";
 @import "new";
+
+
+.color-card {
+  h2 {
+    padding-top: 42px;
+    padding-bottom: 15px;
+  }
+}
+
+.top-card {
+  h2 {
+    padding-top: 65px;
+    margin-bottom: 4px;
+  }
+  h3 #h3 {
+    padding-bottom: 25px;
+    margin: 0px;
+  }
+}
+
+.hair_card {
+  h3 {
+    padding-top: 75px;
+  }
+}
+

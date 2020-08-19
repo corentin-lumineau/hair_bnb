@@ -7,11 +7,22 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;700&family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
   </head>
 
   <body>
+    <% if user_signed_in? %>
+      <%= render "shared/navbar_when_sign_in" %>
+    <% else %>
+      <%= render "shared/navbar_when_not_sign_in" %>
+    <% end %>
+
+
+
+
+
+
     <%= render 'shared/flashes' %>
     <%= yield %>
   </body>

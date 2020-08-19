@@ -1,55 +1,30 @@
-<div class="navbar-bg navbar-content">
-  <div class="navbar-content w-100">
-    <%= link_to "hairbnb", root_path %>
-    <div>tgt</div>
-    <div class="navbar-content">
-      <div class="navbar-content">
-        <i class="fas fa-globe mr-2"></i>
-        <i class="fas fa-angle-down"></i>
-      </div>
-      <div class="navbar-content ml-4">
-        <i class="fas fa-bars"></i>
-        <div class="ml-2">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item dropdown">
-              <%= image_tag "Chewbacca.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                <%= link_to "Louer ma chevelure", new_hair_path, class: "dropdown-item" %>
-                <%= link_to "Mes locations", "#", class: "dropdown-item" %>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="container-global d-flex">
+<div class="container-global">
   <div>
-    <div class="hair_card mr-2" style="background-image: url('<%= image_path "Chewbacca.jpg" %>')">
-      <i id="bg" class="fas fa-heart"></i>
-      <i class="far fa-heart"></i>
-    </div>
-    <h3>Chocolat | Kashyyyk</h3>
+   BAR DE RECHERCHE
   </div>
-  <div>
-    <div class="hair_card" style="background-image: url('<%= image_path "Chewbacca.jpg" %>')">
-      <i id="bg" class="fas fa-heart"></i>
-      <i class="far fa-heart"></i>
-    </div>
+  <div class="border-t-gris color-card">
+    <h2>Avec Hairbnb, fini la calvitie </h2>
     <div class="flex">
-      <i class="fas fa-star"></i>
-      <h4>5</h4>
-      <h4>(398)</h4>
+      <% @hair_colors.each do |color| %>
+        <%= render "shared/color_hair_card", color: color %>
+      <% end %>
     </div>
-    <h3>Chocolat | Kashyyyk</h3>
   </div>
-  <div>
-    <div class="color_hair_card ml-2" style="background-image: url('<%= image_path "Chewbacca.jpg" %>')">
-      <div class="car_footer">
-        <h4>Hair color</h4>
-      </div>
+  <div class="top-card">
+    <h2>Les meilleurs cheveulures</h2>
+    <h3 id="h3">Découvrez une sélection des chevelures les mieux notées dans le monde</h3>
+    <div class="flex">
+      <% @hairs.each do |hair| %>
+        <%= render "shared/top_hair_card", hair: hair %>
+      <% end %>
+    </div>
+  </div>
+  <div class="hair-card">
+    <h3>Classement par dates de mise en ligne</h3>
+    <div class="flex">
+      <% @hairs.each do |hair| %>
+        <%= render "shared/hair-card", hair: hair %>
+      <% end %>
     </div>
   </div>
 </div>

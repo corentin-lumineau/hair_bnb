@@ -1,13 +1,15 @@
 <!-- TOP HAIR CARD -->
- <div>
-  <div class="hair_card" style="background-image: url('<%= image_path "Chewbacca.jpg" %>')">
-    <i id="bg" class="fas fa-heart"></i>
-    <i class="far fa-heart"></i>
+<%= link_to(hair_path(hair.id))do %>
+  <div id="lien_out">
+    <div class="hair_card" style="background-image: url('<%= image_path "top_hair/#{hair.user.name}.jpg" %>')">
+      <i id="bg" class="fas fa-heart"></i>
+      <i class="far fa-heart"></i>
+    </div>
+    <div class="flex">
+      <i class="fas fa-star"></i>
+      <h4>5</h4>
+      <h4>(398)</h4>
+    </div>
+    <h3><%= "#{hair.color.capitalize} | #{hair.nature.capitalize}" %></h3>
   </div>
-  <div class="flex">
-    <i class="fas fa-star"></i>
-    <h4>5</h4>
-    <h4>(398)</h4>
-  </div>
-  <h3>Chocolat | Kashyyyk</h3>
-</div>
+<% end %>
