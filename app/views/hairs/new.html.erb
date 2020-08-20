@@ -15,6 +15,8 @@
       <%= f.input :quantity %>
       <%= f.input :hair_length %>
       <%= f.input :price %>
+      <%= f.input :photo, as: :file,
+                  required: true %>
         <div class="form-actions">
         <%= f.button :submit, "Envoie ta chevelure!" %>
         <%end%>

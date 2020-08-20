@@ -5,6 +5,10 @@ class LocationPolicy < ApplicationPolicy
     end
   end
 
+  def index?
+    return true
+  end
+
   def new?
     create?
   end
@@ -16,6 +20,7 @@ class LocationPolicy < ApplicationPolicy
   def show?
     return true
   end
+
 
 
 end

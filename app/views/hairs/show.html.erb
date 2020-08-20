@@ -6,15 +6,7 @@
       <h3><%= @user.address %></h3>
     </div>
 
-    <div class="flex radius-photo">
-      <img src="<%= image_path "Chewbacca.jpg" %>" alt="" class="photo-size">
-      <div class="photo-display photo-size">
-        <img src="<%= image_path "Chewbacca.jpg" %>" alt="" class="photo-1 scd-photo-size">
-        <img src="<%= image_path "Chewbacca.jpg" %>" alt="" class="photo-2 scd-photo-size">
-        <img src="<%= image_path "Chewbacca.jpg" %>" alt="" class="photo-3 scd-photo-size">
-        <img src="<%= image_path "Chewbacca.jpg" %>" alt="" class="photo-4 scd-photo-size">
-      </div>
-    </div>
+    <%= render "shared/photo-display", hair: @hair %>
 
     <div class="show_details">
       <div class="descrition">
