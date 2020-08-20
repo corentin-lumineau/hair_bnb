@@ -1,45 +1,63 @@
-<div class="image_show_hair">
-
-  <div class="container-global">
-    <div class="titre">
-      <h1><%= @hair.title %></h1>
-      <h3><%= @user.address %></h3>
-    </div>
-
-    <%= render "shared/photo-display", hair: @hair %>
-
-    <div class="show_details">
-      <div class="descrition">
-        <div class="border-bottom">
-          <h3> Proprietaire: <%= @hair.user.name %></h3>
-          <h4> <%= @hair.color %> | <%= @hair.hair_length %> | <%= @hair.nature %> | <%= @hair.quantity %> de cheveux</h4>
+ <div class="container-global">
+<!-- ========================================================================= -->
+      <div class="row">
+        <div class="col-12 col-lg-8">
+          <div>
+            <h1 class="titre"><%= @hair.title %></h1>
+          </div>
+          <div>
+            <div>
+              <h2 id="user_name"><span class="graisse size-23"><%= @hair.user.name %></span> te loue ses cheveux </h2>
+              <h4 class= "gristresclair p_bottom"><%= @hair.user.address %></h4>
+              <h2>pour la modique somme de <span class="graisse"><%= @hair.price %> €.</span></h2>
+            </div>
+            <div class="show_hair_div">
+              <div>
+                <div class="color_hair_card" style="background-image: url('<%= image_path "colors/#{@hair.color}.jpg" %>')">
+                  <div class="car_footer">
+                    <h4><%= @hair.color %></h4>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="nature_hair_card" style="background-image: url('<%= image_path "nature_hair/#{@hair.nature}.svg" %>')">
+                  <div class="car_footer">
+                    <h4><%= @hair.nature %></h4>
+                  </div>
+                </div>
+              </div>
+              <h3> <span class="graisse"><%= @hair.hair_length %></span> </h3>
+            </div>
+          </div>
         </div>
-        <div class="border-bottom">
-          <h3>SOINS PARTICULIERS</h3>
-          <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis natus non ad repellendus eum quibusdam, eius quis et animi, delectus nisi! Illo, maxime quae! Dignissimos eum error dolorem soluta consequatur.</h4>
-        </div>
-        <div class="border-bottom">
-          <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci eum odit aliquid blanditiis cupiditate illo! Consequuntur maxime, in? Cupiditate at in dolores reprehenderit eaque facilis reiciendis ullam, non deleniti natus!</span>
-          <span>Quod mollitia cupiditate facilis sint magnam molestias recusandae iure deleniti error dolore ut, deserunt ipsum ducimus alias ratione? Aspernatur asperiores illo facere est laborum, blanditiis adipisci atque mollitia aperiam necessitatibus.</span>
-          <span>Aliquam, voluptatem, doloribus? Odio delectus maiores eos earum debitis. Mollitia dignissimos, neque at officia sunt accusantium voluptatibus natus! A dolorem autem, placeat nulla et expedita deserunt adipisci magni temporibus porro.</span>
-          <span>Quam doloremque ipsum error accusamus, quo quibusdam ullam commodi, animi quia. Repudiandae molestiae quas animi numquam reiciendis tempora. Aperiam odit sit numquam magni, et nihil impedit quibusdam amet reprehenderit, neque.</span>
-          <span>Quasi fuga iste, incidunt autem, libero nihil ea aut, dolor temporibus, est dolore dolores facere architecto maiores unde natus nesciunt inventore voluptatem blanditiis labore perferendis maxime nulla! Modi quasi, delectus.</span></p>
-
-          <%= link_to "Contacter le propiétaire", "#" %>
-        </div>
-        <div class="equipement">
-          <h3>Equipements</h3>
-          <ul>
-            <li><%= image_tag "hairbrush.svg", width: "20px", height: "20px" %></li>
-            <li><%= image_tag "hairbrush.svg", width: "20px", height: "20px" %></li>
-            <li><%= image_tag "hairbrush.svg", width: "20px", height: "20px" %></li>
-          </ul>
+        <div class="col-12 col-lg-4">
+          <div>
+            <img src="<%= image_path "Chewbacca.jpg" %>" alt="" class="photo_show" >
+          </div>
         </div>
       </div>
+      <%#= cl_image_tag @user.photo.key %>
+<!-- ========================================================================= -->
+    <div class="show_hair_div2">
+      <!-- enfant n°1 -->
+      <div>
+        <div class="border-bottom marge_hair">
+          <h3><%= @hair.description %></h3>
+        </div>
+
+        <div class="border-bottom marge_hair">
+          <h3><em style="font-weight: thin;">Soins Particuliers</em></h3>
+          <h4>Attendre que la colonne 'soins particuliers' soient seedés et migres dns le modele hair</h4>
+        </div>
+
+
+        <%= link_to "Contacter le propiétaire", "#" %>
+
+      </div>
+      <!-- enfant n°2 -->
       <div class="form_loc">
         <%= render "locations/form", hair: @hair, location: @location %>
       </div>
     </div>
 
   </div>
-</div>

@@ -1,4 +1,76 @@
-.show_details{
+.container_show_hair{
+  width: 850px;
+  /*background-color: red;*/
+  margin: 0 auto;
+}
+
+.show_hair_div2{
   display: flex;
+}
+.titre{
+  /*display:flex;*/
+  /*justify-content: center;*/
+  /*align-items: center;*/
+  margin-bottom: 50px;
+  padding-top: 20px;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.3)
+}
+
+.graisse{
+  font-weight: bold;
+}
+
+.hair_description{
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
+  margin-top: 20px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.desc{
+  width: 50px;
+  height: 40px;
+}
+
+.show_hair_div1{
+   /*display: flex;*/
+   /*justify-content: space-between;*/
+   /*align-items: center;*/
+   width: 100%;
+   margin:60px auto;
+   /*border: 1px black solid;*/
+}
+.show_hair_div{
+  margin: 40px 0px;
+  display: flex;
+  justify-content:start;
+  align-items: center;
+}
+
+.photo_show{
+  width: 300px;
+  height: 100%;
+  object-fit: content;
+  border-radius: 10px;
+  box-shadow: 1px 1px 1px rgba(0,0,0,0.2)
+
+}
+
+#user_name{
+  display: inline;
+}
+
+.size-23 {
+  font-size: 23px;
+}
+.gristresclair {
+  color: $grisclair;
+}
+.marge_hair{
+  margin: 30px auto;
+  padding: 30px auto ;
 }
 
