@@ -16,6 +16,7 @@
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                 <%= link_to "Louer ma chevelure", new_hair_path, class: "dropdown-item" %>
                 <%= link_to "Mes locations", "#", class: "dropdown-item" %>
+                <%= link_to "Se deconnecter", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
               </div>
             </li>
           </ul>
