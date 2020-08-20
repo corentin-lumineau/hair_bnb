@@ -1,5 +1,5 @@
-<div class="container container-global">
-  <div class="ml-5 mr-5 pl-5 pr-5 rounded">
+<div class="container container-global margin-top-18 card-sign-in ">
+  <div class="ml-3 mr-3 pl-3 pr-3 rounded">
     <h2>Log in</h2>
 
     <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -22,3 +22,16 @@
     <%= render "devise/shared/links" %>
   </div>
 </div>
+
+
+<style>
+  body {
+    background-image: url(<%= asset_path 'bg_Hairbnb.jpg' %>);
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+  }
+</style>
+

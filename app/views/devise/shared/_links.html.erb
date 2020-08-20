@@ -5,8 +5,8 @@
 <% end %>
 
 <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
-  <div class="btn-2 mt-2">
-    <%= link_to "Sign up", new_registration_path(resource_name) %><br />
+  <div class=" mt-2">
+    <%= link_to "Create an account", new_registration_path(resource_name) %><br />
   </div>
 <% end %>
 
