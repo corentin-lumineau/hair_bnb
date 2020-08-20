@@ -28,7 +28,8 @@ import "bootstrap";
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 import { input } from '../components/select_radio_buttons.js'
+import { clickModal} from '../components/click_modal.js'
 document.addEventListener('turbolinks:load', () => {
-
     input();
+    clickModal();
 });
