@@ -1,6 +1,6 @@
 class Hair < ApplicationRecord
-  COLORS = ["brun", "chatain", "noir", "blond", "blanc", "rouge", "bleu", "cendre", "roux"]
-  TYPES = ["bouclé", "raide", "crepu", "ondulé"]
+  COLORS = ["brun", "chatain", "noir", "blond", "blanc", "rouge", "bleu", "roux"]
+  TYPES = ["boucle", "raide", "crepu", "ondule"]
 
   belongs_to :user
   has_many :locations, dependent: :destroy
