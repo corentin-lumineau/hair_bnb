@@ -1,5 +1,5 @@
 <div class="flex radius-photo">
-  <img src="<%= image_path "Chewbacca.jpg" %>" alt="" class="photo-size">
+  <%= cl_image_tag @hair.photo.key, class: "photo-size" %>
   <div class="photo-display photo-size">
     <img src="<%= image_path "Chewbacca.jpg" %>" alt="" class="photo-1 scd-photo-size">
     <img src="<%= image_path "Chewbacca.jpg" %>" alt="" class="photo-2 scd-photo-size">
