@@ -11,7 +11,8 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
   </head>
 
-  <body>
+<!-- class="<#% 'img-sign-in-test' if controller_name == 'sessions' && action_name == 'new' %>" -->
+  <body >
     <% if user_signed_in? %>
       <%= render "shared/navbar_when_sign_in" %>
     <% else %>
