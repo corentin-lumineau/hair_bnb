@@ -1,5 +1,7 @@
 class HairsController < ApplicationController
   before_action :set_hair, only: [:show, :destroy]
+  skip_before_action :authenticate_user!, only: [:index]
+
 
   def index
     @hairs = policy_scope(Hair)
