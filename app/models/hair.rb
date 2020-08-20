@@ -4,6 +4,7 @@ class Hair < ApplicationRecord
 
   belongs_to :user
   has_many :locations, dependent: :destroy
+  has_one_attached :photo
 
   validates :title, presence: true, uniqueness: true
   validates :description, presence: true

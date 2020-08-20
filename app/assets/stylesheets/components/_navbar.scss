@@ -12,3 +12,13 @@
   justify-content: space-between;
   align-items: center;
 }
+
+.av-hover {
+  position: relative;
+  padding: 5px 5px 5px 10px;
+  &:hover {
+  background-color: $gristresclair;
+  border-radius: 50px;
+  transition-duration: 200ms;
+  }
+}
