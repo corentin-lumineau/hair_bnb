@@ -1,5 +1,6 @@
 .btn-1 {
-  background: linear-gradient(90deg, #E6224E 0%, #D70867 100%);
+  background: linear-gradient(90deg, #E6224E 0%, #D70867 50%, #E6224E 100%);
+  background-size: 200% auto;
   border-radius: 10px;
   text-decoration: none;
 
@@ -14,10 +15,12 @@
 
   text-align: center;
 
-  color: #FFFFFF;
+  color: white;
+  transition: 0.5s;
   &:hover {
     text-decoration: none;
     color: $white;
+    background-position: right center;
   }
 
 }
