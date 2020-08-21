@@ -7,6 +7,11 @@ class Location < ApplicationRecord
   validate :end_date_after_start_date
   validate :valid_dates
 
+  def total_cost
+    length_of_location = (end_date - start_date).to_i
+    length_of_location * hair.price
+  end
+
   private
 
   def end_date_after_start_date

@@ -1,12 +1,48 @@
-<div class="container_formulaire">
-  <div class="card_formulaire">
-    <h2 class="titre_form"> Je veux porter ces cheveux 👩‍🦰  </h2>
-    <%= simple_form_for( @location ) do |f| %>
-      <%= f.input :start_date, label: 'Début de location', class: "btn_ghost"%>
-      <%= f.input :end_date, label: 'Fin de location' %>
-      <%= f.submit  'Vérifier la disponibilité', class: "btn btn-danger" %>
-    <% end %>
+<div class="container-global">
 
+  <div class="row">
+    <div class="col-12 col-lg-8">
+      <div>
+        <h1>
+          Cher <%= User.find(@location.user_id).name %>, ta location a bien été validée .
+        </h1>
+      </div>
+      <div class="info_loc">
+        <div>
+          <h2 id="user_name"><span class="graisse size-23"><%= @hair.user.name %></span> te loue <%= @hair.title %> </h2>
+          <h2>au prix de <span class="graisse"><%= @location.total_cost %> €.</span></h2>
+          <h2>Du <%= @location.start_date %> au <%= @location.end_date %></h2>
+        </div>
+        <div class="show_hair_div">
+          <div>
+            <div class="color_hair_card" style="background-image: url('<%= image_path "colors/#{@hair.color}.jpg" %>')">
+              <div class="car_footer">
+                <h4><%= @hair.color %></h4>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="nature_hair_card" style="background-image: url('<%= image_path "nature_hair/#{@hair.nature}.svg" %>')">
+              <div class="car_footer">
+                <h4><%= @hair.nature %></h4>
+              </div>
+            </div>
+          </div>
+          <h3> <span class="graisse"><%= @hair.hair_length %></span> </h3>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-lg-4">
+      <div>
+        <!-- <img src="<%= image_path "Chewbacca.jpg" %>" alt="" class="photo_show" > -->
+        <%= cl_image_tag @hair.photo.key %>
+      </div>
+    </div>
   </div>
 
+  <%= link_to "Contacter le propriétaire", "#", class: " btn-2 deco-none color_red_button marges" %>
+  <%= link_to "Voir toutes mes locations", locations_path, class: " btn-2 deco-none color_red_button marges" %>
+
+
 </div>
+
