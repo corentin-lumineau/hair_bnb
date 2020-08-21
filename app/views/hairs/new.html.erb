@@ -1,26 +1,27 @@
 
 <div class="container-global-new-hair">
-  <%# <div class="ml-5 mr-5 pl-5 pr-5 rounded"> %>
+  
   <div class="form-container-new-hair">
     <h2>Renseignes ta touffe!</h2>
     <div><%= simple_form_for @hair do |f| %>
       <%= f.input :title %>
       <%= f.input :description %>
       <div class="colors-checkbox">
-      <%= f.input :color, as: :radio_buttons, label_method: ->(item) {tag.span item, class: "d-none"}, collection: Hair::COLORS, wrapper: :vertical_collection_inline %>
+        <%= f.input :color, as: :radio_buttons, label_method: ->(item) {tag.span item, class: "d-none"}, collection: Hair::COLORS, wrapper: :vertical_collection_inline %>
       </div>
       <div class="natures-checkbox">
-      <%= f.input :nature, as: :radio_buttons, label_method: ->(item) {tag.span item, class: "d-none"}, collection: Hair::TYPES, wrapper: :vertical_collection_inline %>
+        <%= f.input :nature, as: :radio_buttons, label_method: ->(item) {tag.span item, class: "d-none"}, collection: Hair::TYPES, wrapper: :vertical_collection_inline %>
       </div>
-      <%= f.input :quantity %>
-      <%= f.input :hair_length %>
+      <%= f.input :hair_length, as: :check_boxes, collection: Hair::LENGTH, wrapper: :vertical_collection_inline %>
       <%= f.input :price %>
       <%= f.input :photo, as: :file,
                   required: true %>
-        <div class="form-actions">
-        <%= f.button :submit, "Envoie ta chevelure!" %>
-        <%end%>
+       <div class="form-actions">
+         <div class="btn-1">
+          <%= f.button :submit, "Envoie ta chevelure!" %>
+          <%end%>
         </div>
+      </div>
     </div>
   </div>
 </div>

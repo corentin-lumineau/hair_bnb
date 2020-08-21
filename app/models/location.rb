@@ -12,6 +12,10 @@ class Location < ApplicationRecord
     length_of_location * hair.price
   end
 
+  def total_num_day
+    day_of_location = (end_date - start_date).to_i
+  end
+
   private
 
   def end_date_after_start_date
@@ -24,7 +28,7 @@ class Location < ApplicationRecord
 
   def valid_dates
     locations = hair.locations
-    data_ranges = locations.map { |loc| loc.start_date.to_date..loc.end_date.to_date }
+    data_ranges = locations.map { |loc| loc.start_date..loc.end_date }
 
     if !(date_included?(data_ranges))
       errors.add(:start_date, "not available")

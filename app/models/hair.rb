@@ -1,6 +1,7 @@
 class Hair < ApplicationRecord
   COLORS = ["brun", "chatain", "noir", "blond", "blanc", "rouge", "bleu", "roux"]
   TYPES = ["boucle", "raide", "crepu", "ondule"]
+  LENGTH = ["ras", "court", "mi-long", "long"]
 
   belongs_to :user
   has_many :locations, dependent: :destroy

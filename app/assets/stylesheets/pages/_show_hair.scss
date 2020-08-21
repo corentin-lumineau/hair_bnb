@@ -54,9 +54,9 @@
 }
 
 .photo_show{
-  width: 300px;
-  height: 100%;
-  object-fit: content;
+ /* width: 300px;
+  height: 100%;*/
+  object-fit: cover;
   border-radius: 10px;
   box-shadow: 1px 1px 1px rgba(0,0,0,0.2)
 
@@ -102,5 +102,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.size_title{
+  font-weight: bolder;
 }
 
