@@ -1,7 +1,7 @@
 <!-- HAIR CARD -->
 <%= link_to(hair_path(hair.id))do %>
   <div id="lien_out" class="margin-index">
-    <div class="hair_card" style="background-image: url('<%= image_path "Chewbacca.jpg" %>')">
+    <div class="hair_card" style="background-image: url('<%= cl_image_path hair.photo.key %>')">
       <i id="bg" class="fas fa-heart"></i>
       <i class="far fa-heart"></i>
     </div>
