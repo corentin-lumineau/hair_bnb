@@ -3,7 +3,7 @@
       <div class="row">
         <div class="col-12 col-lg-8">
           <div>
-            <h1 class="titre"><%= @hair.title %></h1>
+            <h1 class="titre size_title"><%= @hair.title %></h1>
           </div>
           <div>
             <div>
@@ -31,9 +31,9 @@
           </div>
         </div>
         <div class="col-12 col-lg-4">
-          <div>
+          <div class="mt-2">
             <!-- <img src="<%= image_path "Chewbacca.jpg" %>" alt="" class="photo_show" > -->
-            <%= cl_image_tag @hair.photo.key %>
+            <%= cl_image_tag @hair.photo.key, crop: :fill, height: "300",width: "300", class: "photo_show" %>
           </div>
         </div>
       </div>
@@ -53,7 +53,7 @@
         <div class="div_button_hair_show">
           <%= link_to "Contacter le propriétaire", "#", class: " btn-2 deco-none color_red_button " %>
 
-          <%= link_to " ↪️ Chevelures ", hairs_path, class: " btn-2 deco-none color_red_button" %>
+          <%= link_to "Toutes le chevelures ", hairs_path, class: " btn-2 deco-none color_red_button" %>
         </div>
       </div>
       <!-- enfant n°2 -->
