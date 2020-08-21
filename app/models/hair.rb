@@ -1,6 +1,7 @@
 class Hair < ApplicationRecord
   COLORS = ["brun", "chatain", "noir", "blond", "blanc", "rouge", "bleu", "roux"]
   TYPES = ["boucle", "raide", "crepu", "ondule"]
+  LENGTH = ["ras", "court", "mi-long", "long"]
 
   belongs_to :user
   has_many :locations, dependent: :destroy
@@ -16,5 +17,10 @@ class Hair < ApplicationRecord
   validates :color, inclusion: { in: Hair::COLORS }
   validates :nature, inclusion: { in: Hair::TYPES }
 
-
+  include PgSearch::Model
+  pg_search_scope :search_by_nature_and_color,
+    against: %i[nature color],
+    using: {
+      tsearch: { prefix: true }
+    }
 end
