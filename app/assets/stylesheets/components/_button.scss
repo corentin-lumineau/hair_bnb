@@ -32,6 +32,7 @@
   padding: 15px 30px;
   text-align: center;
   display: table;
+  color: $rose;
   a {
     color: $rose;
     font-weight: 500;
@@ -43,8 +44,16 @@
     background-color: transparent;
     font-style: bold;
     border: 1px solid $rose;
-
+    color: $rose;
   }
+}
+
+.margin-l-20 {
+  margin-left: 20px;
+}
+
+.margin-t-20 {
+  margin-top: 20px;
 }
 
 .deco-none {

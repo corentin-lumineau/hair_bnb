@@ -10,6 +10,7 @@
   <% if params[:hair].present? %>
     <% if @hairs.empty? %>
       <h3 class="oups border-t-gris">😬 Oups, il n'y a pas de résultats à votre recherche</h3>
+      <%= link_to "Retour au menu principal", hairs_path, class: "btn-2 deco-none margin-l-20" %>
     <% else %>
       <div class="hair-card border-t-gris">
         <h3>Résultats de votre recherche</h3>
@@ -18,6 +19,7 @@
               <%= render "shared/hair-card", hair: hair %>
             <% end %>
         </div>
+        <%= link_to "Retour au menu principal", hairs_path, class: "btn-2 deco-none margin-t-20" %>
       </div>
     <% end %>
   <% else %>
