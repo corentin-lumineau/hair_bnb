@@ -16,5 +16,10 @@ class Hair < ApplicationRecord
   validates :color, inclusion: { in: Hair::COLORS }
   validates :nature, inclusion: { in: Hair::TYPES }
 
-
+  include PgSearch::Model
+  pg_search_scope :search_by_nature_and_color,
+    against: %i[nature color],
+    using: {
+      tsearch: { prefix: true }
+    }
 end
