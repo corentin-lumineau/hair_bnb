@@ -1,6 +1,13 @@
-<div>
-<% @locations.each do |f| %>
-<%= location.start_date %>
-<%= location.end_date %>
-<% end %>
+<div class="container card-location">
+  <% @locations.each do |location| %>
+    <%= render 'card_location', location: location %>
+  <% end %>
 </div>
+
+
+
+
+
+
+
+
