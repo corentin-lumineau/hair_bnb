@@ -1,26 +1,19 @@
 <div class="card-location">
   <% if location.hair.photo.attached? %>
-      <div class="radius">
-        <%= cl_image_tag location.hair.photo.key, crop: :fill, height: "250", width: "250"%>
-      </div>
-  <% else %>
     <div class="radius">
-      <%= image_tag "Chewbacca.jpg", alt: "alttext" %>
+      <%= cl_image_tag location.hair.photo.key, crop: :fill, height: "250", width: "250"%>
     </div>
+  <% else %>
+      <div class="radius">
+       <%= image_tag "Chewbacca.jpg", alt: "alttext" %>
+      </div>
   <% end %>
   <div class="enf2">
-    <%= location.hair.user.name %>
-    <%= location.start_date.strftime(' %e %B %Y') %>
-    <%= location.end_date.strftime(' %e %B %Y') %>
-    <p><%= location.total_num_day %> jours</p>
-    <%= "#{location.total_cost} €" %>
-
+    <h3> <%= location.hair.user.name %></h3>
+    <h3> <%= location.start_date.strftime(' %e %B %Y') %></h3>
+    <h3> <%= location.end_date.strftime(' %e %B %Y') %></h3>
+    <h3><%= location.total_num_day %> jours</h3>
+    <h3> <%= "#{location.total_cost} €" %> </h3>
   </div>
-
-
-
-
-
-
 </div>
 
