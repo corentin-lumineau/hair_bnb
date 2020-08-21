@@ -84,11 +84,12 @@
     vertical-align: middle;
     border-style: none;
     background-size: cover;
-    width: 50%;
+    width: 100%;
     border-radius: 10px;
   }
   .radius{
     padding:5%;
+    width: 50%;
 
   }
 }
@@ -100,6 +101,7 @@ flex-grow: 0;
 
 .enf2{
 flex-grow: 1;
+
 }
 
  .photo_proprio{
