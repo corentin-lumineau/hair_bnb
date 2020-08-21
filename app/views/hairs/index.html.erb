@@ -1,30 +1,51 @@
 <div class="container-global">
-  <div>
-   BAR DE RECHERCHE
-  </div>
-  <div class="border-t-gris color-card">
-    <h2>Avec Hairbnb, fini la calvitie </h2>
-    <div class="flex">
-      <% @hair_colors.each do |color| %>
-        <%= render "shared/color_hair_card", color: color %>
-      <% end %>
+  <%= simple_form_for :hair, url: hairs_path, method: :get do |f| %>
+    <div class="bar_recherche flex">
+      <%= f.input :nature,  placeholder: 'Quel type de cheveux souhaitez vous ?', label: "NATURE" %>
+      <%= f.input :color,  placeholder: 'Quel couleur souhaitez vous ?', label: "COULEUR" %>
+      <%= f.button :submit, "Rechercher", class: "btn-1" %>
     </div>
-  </div>
-  <div class="top-card">
-    <h2>Les meilleurs cheveulures</h2>
-    <h3 id="h3">Découvrez une sélection des chevelures les mieux notées dans le monde</h3>
-    <div class="flex">
-      <% @hairs.each do |hair| %>
-        <%= render "shared/top_hair_card", hair: hair %>
-      <% end %>
+  <% end %>
+
+  <% if params[:hair].present? %>
+    <% if @hairs.empty? %>
+      <h3 class="oups border-t-gris">😬 Oups, il n'y a pas de résultats à votre recherche</h3>
+    <% else %>
+      <div class="hair-card border-t-gris">
+        <h3>Résultats de votre recherche</h3>
+        <div class="scroll">
+          <% @hairs.each do |hair| %>
+              <%= render "shared/hair-card", hair: hair %>
+            <% end %>
+        </div>
+      </div>
+    <% end %>
+  <% else %>
+    <div class="border-t-gris color-card">
+      <h2>Avec Hairbnb, fini la calvitie </h2>
+      <div class="flex">
+        <% @hair_colors.each do |color| %>
+          <%= render "shared/color_hair_card", color: color %>
+        <% end %>
+      </div>
     </div>
-  </div>
-  <div class="hair-card">
-    <h3>Classement par dates de mise en ligne</h3>
-    <div class="flex">
-      <% @hairs.each do |hair| %>
-        <%= render "shared/hair-card", hair: hair %>
-      <% end %>
+    <div class="top-card">
+      <h2>Les meilleurs cheveulures</h2>
+      <h3 id="h3">Découvrez une sélection des chevelures les mieux notées dans le monde</h3>
+      <div class="scroll">
+        <% @hairs.each do |hair| %>
+          <%= render "shared/top_hair_card", hair: hair %>
+        <% end %>
+      </div>
     </div>
-  </div>
+    <div class="hair-card">
+      <h3>Classement par dates de mise en ligne</h3>
+      <div class="scroll">
+        <% @hairs.each do |hair| %>
+          <%= render "shared/hair-card", hair: hair %>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+
 </div>

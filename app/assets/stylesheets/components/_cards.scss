@@ -71,6 +71,15 @@
   }
 }
 
+.scroll {
+  display:flex;
+  align-items: center;
+  overflow-x: scroll;
+}
+
+.margin-index {
+  margin-right: 40px;
+
 // NATURE HAIR CARD ==========
 .nature_hair_card {
   position: relative;

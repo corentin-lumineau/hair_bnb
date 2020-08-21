@@ -1,0 +1,35 @@
+.bar_recherche {
+  margin: 0px auto 40px auto;
+  padding: 17px 24px;
+  background: #FFFFFF;
+  border: 1px solid #B0B0B0;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  label {
+    font-weight: bold;
+    padding: 0px;
+    margin: 0px;
+    font-size: 10px;
+    color: $noir;
+  }
+
+  .form-group {
+    margin: 0px;
+  }
+
+  .form-control {
+    font-size: 16px;
+    color: #717171;
+    border: none;
+    border-bottom: 1px solid $gristresclair;
+    width: 160%
+  }
+
+  h4 {
+    color: white;
+  }
+  i {
+    color: white;
+    padding-right: 10px;
+  }
+}
