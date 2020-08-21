@@ -7,6 +7,11 @@ class Location < ApplicationRecord
   validate :end_date_after_start_date
   validate :valid_dates
 
+  def total_cost
+    length_of_location = (end_date - start_date).to_i
+    length_of_location * hair.price
+  end
+
   private
 
   def end_date_after_start_date
@@ -29,7 +34,7 @@ class Location < ApplicationRecord
   def date_included?(data_ranges)
     data_ranges.all? do |une_duree_de_loc|
       une_duree_de_loc.to_a.each do |day|
-        return false if (start_date.to_date..end_date.to_date).include?(day)
+        return false if (start_date..end_date).include?(day)
       end
     end
   end
