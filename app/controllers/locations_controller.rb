@@ -14,7 +14,7 @@ class LocationsController < ApplicationController
     if @location.save
       redirect_to location_path(@location)
     else
-      render :new
+      redirect_to hair_path(@hair, retry: true)
     end
   end
 
