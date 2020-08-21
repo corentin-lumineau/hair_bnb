@@ -17,6 +17,7 @@
 
   color: white;
   transition: 0.5s;
+  font-family: Roboto;
   &:hover {
     text-decoration: none;
     color: $white;
@@ -33,6 +34,7 @@
   text-align: center;
   display: table;
   color: $rose;
+  font-family: Roboto;
   a {
     color: $rose;
     font-weight: 500;
@@ -54,6 +56,12 @@
 
 .margin-t-20 {
   margin-top: 20px;
+}
+
+.margin-none {
+  margin: 0px;
+  color: $rose;
+  font-family: Roboto;
 }
 
 .deco-none {
