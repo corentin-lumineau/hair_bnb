@@ -4,7 +4,11 @@ class HairsController < ApplicationController
 
 
   def index
-    @hairs = policy_scope(Hair)
+    if params[:hair] && (params[:hair][:nature].present? || params[:hair][:color])
+      @hairs = policy_scope(Hair.search_by_nature_and_color("#{params[:hair][:nature]} #{params[:hair][:color]}"))
+    else
+      @hairs = policy_scope(Hair)
+    end
     @hair_colors = %w(blond roux brun chatain noir rouge blanc)
     @hair_top = %w(Chew4 Kahl-Drogo Sulli Robinson Tormund)
   end

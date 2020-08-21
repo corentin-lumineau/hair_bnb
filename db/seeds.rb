@@ -54,16 +54,26 @@ end
 puts "Created #{User.count} users"
 
 puts "Creating hairs"
-Hairs1 = { user_id: users[0].id , title:"Chevelure chocolat soyeuse et ondulée", description: "Une belle touffe brune pour les amateurs de poils longs", color: "brun", nature: "boucle", quantity: "1 000 000", hair_length: "2 m", status: true, price: 10000 } #soins: "Appliquer 3 fois par jour un max de shampoo et prier"  }
-Hairs2 = { user_id: users[1].id , title:"Chevelure sauvage et coquine", description:"Une chevelure pour les guerriers, les vrais", color:"noir", nature:"raide", quantity:"200 000", hair_length:"90 cm", status: true, price: 5000,} #soins: "Un guerrier ne prends pas soins de ses cheveux : c'est un guerrier merde !" }
-Hairs3 = { user_id: users[2].id , title:"Chevelure d'un autre monde", description:"Prêt pour faire flipper les gosses ?", color:"bleu", nature:"ondule", quantity:"500 000", hair_length:"1m20", status: true, price: 8000,} #soins: "Appliquer de l'huile essentielle de schtroumpf 2 fois par semaine"  }
-Hairs4 = { user_id: users[3].id, title:"Chevelure perdue", description:"Une chevelure faites pour les aventurier !", color:"chatain", nature:"boucle", quantity:"100 000", hair_length:"50cm", status: true, price: 2000,} #soins: "Badigeonner d'huile de coco tous les matins et laisser sécher au grand air" }
-Hairs5 = { user_id: users[4].id , title:"Chevelure nordique", description:"Vous êtes prêt pour traverser l'hiver !", color:"roux", nature:"crepu", quantity:"50 000", hair_length:"40 cm", status: true, price: 3500,} #soins: "Asperger de véritable transpiration tous les jours matin midi et soirs afin de conserver une véritable chevelure nordique qui pue !" }
+Hair1 = { user_id: users[0].id , title:"Chevelure chocolat soyeuse et ondulée", description: "Une belle touffe brune pour les amateurs de poils longs", color: "brun", nature: "boucle", quantity: "1 000 000", hair_length: "2 m", status: true, price: 10000, soins: "Appliquer 3 fois par jour un max de shampoo et prier"  }
+Hair2 = { user_id: users[1].id , title:"Chevelure sauvage et coquine", description:"Une chevelure pour les guerriers, les vrais", color:"noir", nature:"raide", quantity:"200 000", hair_length:"90 cm", status: true, price: 5000, soins: "Un guerrier ne prends pas soins de ses cheveux : c'est un guerrier merde !" }
+Hair3 = { user_id: users[2].id , title:"Chevelure d'un autre monde", description:"Prêt pour faire flipper les gosses ?", color:"bleu", nature:"ondule", quantity:"500 000", hair_length:"1m20", status: true, price: 8000, soins: "Appliquer de l'huile essentielle de schtroumpf 2 fois par semaine"  }
+Hair4 = { user_id: users[3].id, title:"Chevelure perdue", description:"Une chevelure faites pour les aventurier !", color:"chatain", nature:"boucle", quantity:"100 000", hair_length:"50cm", status: true, price: 2000, soins: "Badigeonner d'huile de coco tous les matins et laisser sécher au grand air" }
+Hair5 = { user_id: users[4].id , title:"Chevelure nordique", description:"Vous êtes prêt pour traverser l'hiver !", color:"roux", nature:"crepu", quantity:"50 000", hair_length:"40 cm", status: true, price: 3500, soins: "Asperger de véritable transpiration tous les jours matin midi et soirs afin de conserver une véritable chevelure nordique qui pue !" }
+Hair6 = { user_id: users[5].id , title:"Chevelure congelée", description:"Gla Gla Gla on va refroidir les ardeurs !", color:"blond", nature:"raide", quantity:"50 000", hair_length:"40 cm", status: true, price: 3500, soins: "Eviter le soleil et mettre dans le congélo tous les soirs" }
+Hair7 = { user_id: users[6].id , title:"Chevelure tâchetée", description:"Pour les amoureux des chiens !", color:"noir", nature:"ondule", quantity:"50 000", hair_length:"40 cm", status: true, price: 3500, soins: "Utiliser du febreze dessus toutes les deux minutes parce que ça pue!" }
+Hair8 = { user_id: users[7].id , title:"Chevelure plus blond que blond!", description:"Vous êtes secrètement amoureuse de Jon Snow ? Cette chevelure est faite pour vous !", color:"blond", nature:"raide", quantity:"50 000", hair_length:"40 cm", status: true, price: 3500, soins: "Deux fioles d'huile de dragon par jour matin et soir" }
+Hair9 = { user_id: users[8].id , title:"Chevelure d'héroïne", description:"Ca va botter du popotin avec cette superbe chevelure de Scarlett", color:"noir", nature:"ondule", quantity:"50 000", hair_length:"40 cm", status: true, price: 3500, soins: "N'importe quelle merde de chez L'Oreal fera très bien l'affaire" }
+Hair10 = { user_id: users[9].id , title:"Chevelure méchante", description:"Votre nièce s'apelle Alice ? Elle vous saoûle ? Vous voulez lui faire peur ? Go for it !", color:"rouge", nature:"crepu", quantity:"50 000", hair_length:"40 cm", status: true, price: 3500, soins: "Soyons honnêtes, l'entretien de cette touffe relève du miracle alors bon courage" }
 
+hairs = []
 
-[ Hairs1, Hairs2, Hairs3, Hairs4, Hairs5 ].each do |attributes|
+[ Hair1, Hair2, Hair3, Hair4, Hair5, Hair6, Hair7, Hair8, Hair9, Hair10 ].each_with_index do |attributes, index|
   hair = Hair.create!(attributes)
-  puts "Created #{hair.title}"
+  file = URI.open(photos[index])
+  hair.photo.attach(io: file, filename: 'image.png', content_type: 'image/png')
+  hairs << hair
+  
 end
+puts "Created #{Hair.count}"
 puts "Finished!"
 

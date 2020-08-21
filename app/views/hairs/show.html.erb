@@ -32,11 +32,11 @@
         </div>
         <div class="col-12 col-lg-4">
           <div>
-            <img src="<%= image_path "Chewbacca.jpg" %>" alt="" class="photo_show" >
+            <!-- <img src="<%= image_path "Chewbacca.jpg" %>" alt="" class="photo_show" > -->
+            <%= cl_image_tag @hair.photo.key %>
           </div>
         </div>
       </div>
-      <%#= cl_image_tag @user.photo.key %>
 <!-- ========================================================================= -->
     <div class="show_hair_div2">
       <!-- enfant n°1 -->
