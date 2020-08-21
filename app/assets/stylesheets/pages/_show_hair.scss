@@ -35,19 +35,22 @@
   height: 40px;
 }
 
-.show_hair_div1{
-   /*display: flex;*/
-   /*justify-content: space-between;*/
-   /*align-items: center;*/
+.show_hair_div2{
+   display: flex;
+   justify-content: space-evenly;
+   align-items: center;
    width: 100%;
    margin:60px auto;
-   /*border: 1px black solid;*/
 }
+
 .show_hair_div{
   margin: 40px 0px;
   display: flex;
   justify-content:start;
   align-items: center;
+}
+.color_hair_card{
+  margin-right: 30px;
 }
 
 .photo_show{
@@ -72,5 +75,26 @@
 .marge_hair{
   margin: 30px auto;
   padding: 30px auto ;
+}
+.color_red_button{
+  color: $rose;
+  margin-right: 20px;
+  &:hover{
+    color: $rose;
+  }
+}
+.div_button_hair_show{
+  display:flex;
+  justify-content: start;
+  align-items: center;
+}
+#loc_button{
+  color: white;
+}
+
+.form_loc{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
