@@ -53,16 +53,15 @@
 
         <div class="div_button_hair_show">
           <%= link_to "Contacter le propriétaire", "#", class: " btn-2 deco-none color_red_button " %>
-
-
-          <%= link_to "Toutes le chevelures ", hairs_path, class: " btn-2 deco-none color_red_button" %>
-
+          <%= link_to hairs_path, class: " btn-2 deco-none color_red_button" do %>
+            <h3 class="margin-none"><i class="fas fa-undo-alt"></i> Toutes les chevelures</h3>
+          <% end %>
         </div>
       </div>
       <!-- enfant n°2 -->
       <div>
         <div class="btn_modal">
-          <button type="button" class="btn-1" data-toggle="modal" data-target="#exampleModal">
+          <button type="button" class="btn-1 border-none" data-toggle="modal" data-target="#exampleModal">
             <h2 id="loc_button">Je Loue 🤩</h2>
           </button>
 
