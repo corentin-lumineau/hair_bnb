@@ -26,7 +26,13 @@
                   </div>
                 </div>
               </div>
-              <h3> <span class="graisse"><%= @hair.hair_length %></span> </h3>
+              <div class="length_hair_card">
+                <div class="length_description">
+                  <div><i class="fas fa-ruler-vertical"></i>
+                    <h3> <span class="graisse"><%= @hair.hair_length %></span> </h3>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -47,7 +53,7 @@
 
         <div class="border-bottom marge_hair">
           <h3><em style="font-weight: thin;">Soins Particuliers</em></h3>
-          <h4>Attendre que la colonne 'soins particuliers' soient seedés et migres dns le modele hair</h4>
+          <h4><%= @hair.soins %></h4>
         </div>
 
 
