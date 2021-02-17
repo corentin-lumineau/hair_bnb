@@ -33,6 +33,13 @@ class HairsController < ApplicationController
   def show
     @user = current_user
     @location = Location.new
+    @locations = Location.where(hair_id: @hair.id)
+    @locations_dates = @locations.map do |location|
+      {
+        from: location.start_date,
+        to: location.end_date
+      }
+    end
     authorize @hair
   end
 
